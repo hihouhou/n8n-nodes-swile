@@ -9,7 +9,7 @@
     "balance"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/yourusername/n8n-nodes-swile",
+  "homepage": "https://github.com/hihouhou/n8n-nodes-swile",
   "author": {
     "name": "hihouhou",
     "email": "hihouhou@hihouhou.com"
@@ -36,7 +36,7 @@
       "dist/credentials/SwileApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/SwileBalance/SwileBalance.node.js"
+      "dist/nodes/Swile/Swile.node.js"
     ]
   },
   "devDependencies": {

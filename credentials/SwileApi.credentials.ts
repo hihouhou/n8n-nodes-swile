@@ -1,6 +1,4 @@
 import {
-	IAuthenticateGeneric,
-	ICredentialTestRequest,
 	ICredentialType,
 	INodeProperties,
 } from 'n8n-workflow';
@@ -46,25 +44,4 @@ export class SwileApi implements ICredentialType {
 			description: 'Initial refresh token (will be updated automatically)',
 		},
 	];
-
-	authenticate: IAuthenticateGeneric = {
-		type: 'generic',
-		properties: {
-			headers: {
-				'X-Api-Key': '={{$credentials.apiKey}}',
-			},
-		},
-	};
-
-	test: ICredentialTestRequest = {
-		request: {
-			baseURL: 'https://neobank-api.swile.co',
-			url: '/api/v0/wallets',
-			method: 'GET',
-			headers: {
-				'Authorization': '=Bearer {{$credentials.bearerToken}}',
-				'X-Api-Key': '={{$credentials.apiKey}}',
-			},
-		},
-	};
 }
